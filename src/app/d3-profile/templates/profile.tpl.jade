@@ -1,0 +1,14 @@
+.container
+    .row
+        .col-sm-2
+            ul.nav.nav-pills.nav-stacked
+                li(ui-sref-active='active')
+                    a(ui-sref='d3.profile.career') Career
+
+            .nav-header(ng-if='vm.career.heroes.length') Heroes
+            ul.nav.nav-pills.nav-stacked
+                li(ui-sref-active='active', ng-repeat='hero in vm.career.heroes')
+                    a(ui-sref='.hero({ hero: hero.id })') {{ hero.name }}
+
+        .col-sm-10
+            ui-view

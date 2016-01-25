@@ -1,0 +1,12 @@
+div(ng-if='!vm.loaded')
+    i.fa.fa-fw.fa-5x.fa-spin.fa-circle-o-notch
+
+.transition-view(ng-if='vm.error')
+    h3.text-danger {{ vm.error }}
+
+.transition-view(ng-if='vm.career')
+    h1 Career
+
+
+
+    pre {{ vm.career | json }}

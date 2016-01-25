@@ -1,0 +1,10 @@
+div(ng-if='!h.loaded')
+    i.fa.fa-fw.fa-5x.fa-spin.fa-circle-o-notch
+
+.transition-view(ng-if='h.error')
+    h3.text-danger {{ h.error }}
+
+.transition-view(ng-if='h.hero')
+    h1 {{ h.hero.name }}
+
+    pre {{ h.hero | json }}
